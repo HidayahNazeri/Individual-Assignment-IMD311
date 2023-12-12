@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About me</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body bgcolor="black">
+<div id="mySidenav" class="sidenav">
+  <img src="image/logo.png" width="200" height="200">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About me</a>
+  <a href="educations.html">Educations</a>
+  <a href="myfamily.html">My Family</a>
+  <a href="myfriends.html">My Friends</a>
+  <a href="myfavourites.html">My Favourites</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776; MENU</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade" align="center">
+<center>
+  <img src="image/me2.png" style="width:30%">
+</div>
+
+<div class="mySlides fade" align="center">
+  <img src="image/me10.png" style="width:30%">
+</div>
+
+<div class="mySlides fade" align="center">
+  <img src="image/me8.png" style="width:30%">
+</div>
+
+</center>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</center>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<table width="80%" align="center">
+<tr>
+<td colspan="5" align="center">
+<font color="white" size="10" face="Times new roman">
+I'm Hidayah Nazeri
+<font color="white" size="4">
+<font >
+<pre>"Please don’t be afraid, don’t worry yourself. The end and beginning, beginning and end are connected."
+</pre>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+</tr>
+<tr>
+<td>
+<font color="white"><b>DEMOGRAPHIC</font><b>
+<pre><font color="white" face="arial">
+Age:		20 years old
+Location:	Kampar, Perak
+Education:	Information Management
+</font></pre>
+</td>
+<td align="center" colspan="3">
+<br>
+<br>
+<br>
+<font color="white"><b>SKILLS</font>
+<pre><font color="white" face="arial">
+<img src="image/ai.png" width="100" height="100"><img src="image/ps.png" width="100" height="100"><img src="image/id.png" width="100" height="100"><img src="image/an.png" width="100" height="100">
+</font></pre>
+</td>
+<td>
+<br>
+<font color="white"><b>GOALS</font><b>
+<pre><font color="white" face="arial">
+Go on a trip to around the world
+Become a solocamper
+Build a house for my beloved parents
+</font></pre>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="5">
+<br>
+<font color="white"><b>INTEREST</font><b>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+<img src="image/cat.png" width="200" height="200" align="right">
+<td>
+<img src="image/manga.png" width="200" height="200">
+</td>
+<td>
+<img src="image/art.png" width="200" height="200">
+</td>
+<td>
+<img src="image/music.png" width="200" height="200">
+</td>
+<td>
+<img src="image/camping.png" width="200" height="200">
+</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<center>
+<font color="white" size="10">
+Video About Me
+<font>
+</center>
+<center>
+<video src="video/aboutme.mp4" width="20%" controls>
+</center>
+</body>
+</html>
